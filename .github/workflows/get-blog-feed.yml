@@ -1,0 +1,20 @@
+name: Get GitHub blog entries
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-blog-rss:
+    name: Get GitHub blog RSS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get GitHub Blog RSS
+        id: get-github-blog-rss
+        uses: ./
+        with:
+          token: ${{ secrets.MY_TOKEN }}
+          dry-run: false
+          labels: |
+            'actions'
+            'copilot'

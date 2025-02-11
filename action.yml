@@ -1,0 +1,16 @@
+name: 'Get GitHub changelog entries'
+description: 'Get entries of the GitHub changelog per label'
+inputs:
+  token:
+    description: Token with adequate permissions
+    required: true
+  dry-run:
+    description: If true, RSS feed links will only be reported in console. If false, an issue is created with the RSS feed links.
+    required: true
+    default: 'true'
+  labels:
+    description: Multi-line list of labels to filter on
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
