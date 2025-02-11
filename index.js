@@ -65,6 +65,8 @@ async function _formatAndPrintLogOutput(feed) {
   });
 }
 
+const TEST = 3
+
 module.exports = {
   _getRssFeed,
   _formatAndPrintLogOutput
