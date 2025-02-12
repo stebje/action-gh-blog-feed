@@ -18,3 +18,5 @@ jobs:
           labels: |
             'actions'
             'copilot'
+      - name: Run tests
+        run: npm test
